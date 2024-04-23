@@ -1,0 +1,19 @@
+# Archivos generados automáticamente
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+
+# Archivos de configuración local
+db.sqlite3
+*.sqlite3
+*.db
+
+# Carpeta de archivos estáticos
+/static/
+
+# Carpeta de archivos de medios
+/media/
+
+# Carpeta de entorno virtual (si usas uno)
+/venv/
