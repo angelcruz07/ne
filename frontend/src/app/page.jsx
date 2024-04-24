@@ -1,6 +1,8 @@
 import FormTask from '@/components/FormTask'
 import ListTask from '@/components/ListTask'
 
+export const dynamic = 'force-dynamic'
+
 export default function Home() {
 	return (
 		<div className='container mx-auto'>

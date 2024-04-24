@@ -1,9 +1,11 @@
 'use client'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 const FormTask = () => {
 	const [title, setTitle] = useState('')
 	const [description, setDescription] = useState('')
+	const router = useRouter()
 
 	const handleSubmit = async (e) => {
 		e.preventDefault()
@@ -19,11 +21,11 @@ const FormTask = () => {
 			}
 		)
 		const data = await res.json()
-		console.log(data)
+		router.refresh()
 	}
 
 	return (
-		<div className='bg-slate-200 p-7'>
+		<div className='bg-slate-200 p-7 h-fit '>
 			<form onSubmit={handleSubmit}>
 				<h1 className='font-bold text-black'> Agregar tarea </h1>
 				<label htmlFor='title' className='text-xs text-black'>
@@ -42,7 +44,7 @@ const FormTask = () => {
 					name='description'
 					onChange={(e) => setDescription(e.target.value)}
 					className='block w-full p-2 mb-2 rounded-md bg-slate-400 text-slate-900'></textarea>
-				<button className='bg-indigo-500 '>Save</button>
+				<button className='w-full p-4 bg-indigo-500 rounded-md'>Save</button>
 			</form>
 		</div>
 	)
