@@ -10,9 +10,9 @@ const ListTask = async () => {
 	const task = await loadTask()
 
 	return (
-		<div className='w-full p-4 bg-slate-700'>
+		<div className="w-full p-4 bg-slate-700">
 			<h1>Lista de tareas</h1>
-			{task.map((task) => (
+			{task.map(task => (
 				<TaskCard key={task.id} task={task} />
 			))}
 		</div>
